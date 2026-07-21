@@ -7,7 +7,7 @@ Create department security groups for Active Directory.
 Windows Server Active Directory Domain Controller
 
 ## Actions Taken
-- Created Accounting security group
+- Created Accounting-users security group
 - Created IT-Admins security group
 - Created HR-Users security group
 - Created Sales-Users security group
