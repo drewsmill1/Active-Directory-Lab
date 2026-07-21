@@ -193,7 +193,7 @@ Included examples:
 
 Example:
 
-![Active Directory Structure](screenshots/active-directory-structure.png)
+![Active Directory Structure](screenshots/base-directory-structure.png)
 
 ---
 
