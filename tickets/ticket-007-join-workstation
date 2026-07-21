@@ -1,34 +1,30 @@
-Ticket #007 - Join Workstation to Active Directory Domain
-Request
+# Ticket #007 - Join Workstation to Active Directory Domain
 
+## Request
 Join a new workstation to the Active Directory domain to allow centralized management and authentication.
 
-Environment
-
+## Environment
 Windows Server Active Directory Domain Controller
 
 Domain:
 lab.local
 
-Actions Taken
-
+## Actions Taken
 Performed workstation domain join procedure:
 
-Created a new Windows Server EC2 instance to simulate a workstation.
-Configured the workstation to use the Domain Controller as its DNS server.
-Verified network connectivity to the Domain Controller.
-Joined the workstation to the lab.local domain.
-Restarted the workstation to complete the domain join process.
-Verified the workstation appeared in Active Directory Users and Computers.
-Moved the workstation into the Workstations Organizational Unit.
-Verification
+- Created a new Windows Server EC2 instance to simulate a workstation.
+- Configured the workstation to use the Domain Controller as its DNS server.
+- Verified network connectivity to the Domain Controller.
+- Joined the workstation to the **lab.local** domain.
+- Restarted the workstation to complete the domain join process.
+- Verified the workstation appeared in Active Directory Users and Computers.
+- Moved the workstation into the **Workstations** Organizational Unit.
 
-Confirmed the workstation successfully joined the lab.local domain and appeared in the correct Organizational Unit within Active Directory.
+## Verification
+Confirmed the workstation successfully joined the **lab.local** domain and appeared in the correct Organizational Unit within Active Directory.
 
-Result
-
+## Result
 The workstation was successfully joined to the Active Directory domain and is now managed through Active Directory.
 
-Status
-
+## Status
 Completed
