@@ -212,7 +212,9 @@ Active-Directory-Lab
 │   ├── Ticket-001
 │   ├── Ticket-002
 │   ├── Ticket-003
-│   └── Ticket-004+
+│   ├── Ticket-004
+│   ├── Ticket-005
+│   └── Ticket-006
 │
 └── documentation
     └── Setup notes
