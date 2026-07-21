@@ -247,3 +247,16 @@ Potential additions to expand this lab:
 - Add additional Windows Server roles
 - Configure automated user creation with PowerShell
 - Create additional AWS resources for a larger simulated environment
+
+- # Lessons Learned
+
+Through this project I gained hands-on experience with:
+
+- Deploying and managing Windows Server in AWS
+- Understanding Active Directory domain structure
+- Managing users, groups, and permissions
+- Performing common IT support tasks
+- Documenting administrative changes
+- Troubleshooting Windows Server configurations
+
+This project helped build foundational skills for system administration and IT support roles.
