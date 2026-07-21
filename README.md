@@ -106,11 +106,11 @@ lab.local
 
 Completed:
 
-✅ Created Windows Server EC2 instance  
-✅ Connected to server using Remote Desktop Protocol (RDP)  
-✅ Installed Active Directory Domain Services  
-✅ Promoted server to Domain Controller  
-✅ Created lab.local domain  
+* Created Windows Server EC2 instance  
+* Connected to server using Remote Desktop Protocol (RDP)  
+* Installed Active Directory Domain Services  
+* Promoted server to Domain Controller  
+* Created lab.local domain  
 
 ---
 
@@ -209,15 +209,13 @@ Active-Directory-Lab
 │   └── Configuration screenshots
 │
 ├── tickets
-│   ├── Ticket-001
-│   ├── Ticket-002
-│   ├── Ticket-003
-│   ├── Ticket-004
-│   ├── Ticket-005
-│   └── Ticket-006
-│
-└── documentation
-    └── Setup notes
+│   ├── ticket-001-create-groups.md
+│   ├── ticket-002-create-user-accounts.md
+│   ├── ticket-003-assign-group-membership.md
+│   ├── ticket-004-remove-test-group.md
+│   ├── ticket-005-password-reset.md
+│   └── ticket-006-disable-user-account.md
+
 ```
 
 ---
