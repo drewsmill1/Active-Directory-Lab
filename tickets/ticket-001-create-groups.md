@@ -20,5 +20,8 @@ Configured:
 ## Verification
 Confirmed groups were created successfully in Active Directory Users and Computers.
 
+## Result
+Department security groups were created successfully.
+
 ## Status
 Completed
