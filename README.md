@@ -278,8 +278,7 @@ Active-Directory-Lab
 │
 ├── screenshots
 │   ├── Active Directory screenshots
-│   └── Configuration screenshots
-│
+│   
 ├── tickets
 │   ├── ticket-001-create-groups.md
 │   ├── ticket-002-create-user-accounts.md
