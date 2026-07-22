@@ -113,7 +113,7 @@ lab.local
 │   │
 │   ├── Sales
 │   │
-│   └── Managers
+│   └── Accounting
 │
 ├── Security Groups
 │
@@ -147,7 +147,7 @@ Created Organizational Units to organize users and resources:
 - IT
 - HR
 - Sales
-- Managers
+- Accounting
 - Workstations
 
 Organizational Units were used to separate users and computers based on department and improve Active Directory organization.
