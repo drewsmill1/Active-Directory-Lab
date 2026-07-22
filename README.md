@@ -2,7 +2,23 @@
 
 Active Directory homelab built on AWS EC2 using Windows Server, PowerShell, and Active Directory Domain Services (AD DS).
 
-This project simulates a small business Active Directory environment where users, organizational units, and security groups are managed using standard system administration practices.
+This project simulates a small business Active Directory environment where users, organizational units, security groups, workstations, and Group Policy are managed using standard system administration practices.
+
+---
+
+# Key Skills
+
+- Windows Server Administration
+- Active Directory Domain Services (AD DS)
+- Organizational Units (OUs)
+- Security Groups
+- Group Policy Objects (GPO)
+- User and Computer Management
+- AWS EC2
+- PowerShell
+- DNS Configuration
+- Remote Desktop Protocol (RDP)
+- IT Documentation
 
 ---
 
@@ -12,6 +28,7 @@ This project simulates a small business Active Directory environment where users
 - Windows Server
 - Active Directory Domain Services (AD DS)
 - Active Directory Users and Computers
+- Group Policy Management
 - PowerShell
 - Remote Desktop Protocol (RDP)
 - GitHub Documentation
@@ -31,6 +48,9 @@ Objectives completed:
 - Create and manage security groups
 - Create and manage user accounts
 - Assign users to security groups
+- Join a workstation to the Active Directory domain
+- Create and apply Group Policy Objects (GPOs)
+- Verify Group Policy deployment
 - Perform common help desk administration tasks
 - Document administrative tasks using ticket-style documentation
 
@@ -95,7 +115,9 @@ lab.local
 │   │
 │   └── Managers
 │
-└── Security Groups
+├── Security Groups
+│
+└── Workstations
 ```
 
 ---
@@ -111,19 +133,24 @@ Completed:
 * Installed Active Directory Domain Services  
 * Promoted server to Domain Controller  
 * Created lab.local domain  
+* Joined a Windows workstation to the Active Directory domain  
+* Created a Workstations Organizational Unit  
+* Created and applied a Group Policy Object (GPO)  
+* Verified Group Policy deployment using gpresult  
 
 ---
 
 # Organizational Unit Management
 
-Created Organizational Units to organize users:
+Created Organizational Units to organize users and resources:
 
 - IT
 - HR
 - Sales
 - Managers
+- Workstations
 
-Organizational Units were used to separate users based on department and improve Active Directory organization.
+Organizational Units were used to separate users and computers based on department and improve Active Directory organization.
 
 ---
 
@@ -159,6 +186,47 @@ Users were assigned to security groups based on department responsibilities.
 
 ---
 
+# Domain-Joined Workstation
+
+A second Windows EC2 instance was deployed to simulate an employee workstation.
+
+Tasks completed:
+
+- Configured workstation DNS settings to use the Domain Controller
+- Verified communication between workstation and Domain Controller
+- Joined workstation to the `lab.local` domain
+- Verified the computer object appeared in Active Directory
+- Moved the workstation into the Workstations Organizational Unit
+
+Example:
+
+![Domain Joined Workstation](screenshots/domain-joined-workstation.png)
+
+---
+
+# Group Policy Management
+
+A Group Policy Object (GPO) was created to demonstrate centralized computer management.
+
+Tasks completed:
+
+- Created a Workstation Security Policy GPO
+- Linked the GPO to the Workstations Organizational Unit
+- Applied computer configuration settings
+- Updated Group Policy using:
+
+```powershell
+gpupdate /force
+```
+
+- Verified deployment using:
+
+```powershell
+gpresult /r
+```
+
+---
+
 # Help Desk Ticket Documentation
 
 The `tickets` folder contains simulated IT support requests documenting common Active Directory administration tasks.
@@ -173,6 +241,8 @@ Completed tickets:
 | Ticket #004 | Remove temporary security groups |
 | Ticket #005 | Reset user passwords |
 | Ticket #006 | Disable user accounts |
+| Ticket #007 | Join workstation to Active Directory domain |
+| Ticket #008 | Create and apply Group Policy |
 
 These tickets demonstrate documentation practices used in IT support environments.
 
@@ -189,6 +259,8 @@ Included examples:
 - User accounts
 - Security groups
 - Group memberships
+- Domain joined workstation
+- Group Policy configuration
 - Account management tasks
 
 Example:
@@ -214,8 +286,9 @@ Active-Directory-Lab
 │   ├── ticket-003-assign-group-membership.md
 │   ├── ticket-004-remove-test-group.md
 │   ├── ticket-005-password-reset.md
-│   └── ticket-006-disable-user-account.md
-
+│   ├── ticket-006-disable-user-account.md
+│   ├── ticket-007-join-workstation-domain.md
+│   └── ticket-008-create-group-policy.md
 ```
 
 ---
@@ -228,8 +301,11 @@ Through this project I practiced:
 - Active Directory administration
 - Domain Controller configuration
 - User lifecycle management
+- Computer lifecycle management
 - Security group management
 - Organizational Unit design
+- Group Policy management
+- DNS configuration
 - PowerShell administration
 - Remote Desktop administration
 - IT documentation practices
@@ -237,26 +313,32 @@ Through this project I practiced:
 
 ---
 
-# Future Improvements
-
-Potential additions to expand this lab:
-
-- Join client machines to the domain
-- Configure Group Policy Objects (GPOs)
-- Implement shared folders and NTFS permissions
-- Add additional Windows Server roles
-- Configure automated user creation with PowerShell
-- Create additional AWS resources for a larger simulated environment
-
-- # Lessons Learned
+# Lessons Learned
 
 Through this project I gained hands-on experience with:
 
 - Deploying and managing Windows Server in AWS
 - Understanding Active Directory domain structure
-- Managing users, groups, and permissions
+- Managing users, computers, and permissions
+- Configuring DNS for Active Directory communication
+- Applying Group Policy in a domain environment
 - Performing common IT support tasks
 - Documenting administrative changes
 - Troubleshooting Windows Server configurations
 
 This project helped build foundational skills for system administration and IT support roles.
+
+---
+
+# Future Improvements
+
+Potential additions to expand this lab:
+
+- Implement shared folders and NTFS permissions
+- Create and manage Group Policy Preferences
+- Deploy software through Group Policy
+- Configure roaming profiles or folder redirection
+- Automate user creation with PowerShell scripts
+- Add a second Domain Controller for redundancy
+- Configure additional AWS resources to simulate a larger environment
+- Add additional Windows Server roles
