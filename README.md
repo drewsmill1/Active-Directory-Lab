@@ -200,7 +200,7 @@ Tasks completed:
 
 Example:
 
-![Domain Joined Workstation](screenshots/domain-joined-workstation.png)
+![Domain Joined Workstation](screenshots/joined-workstation.png)
 
 ---
 
