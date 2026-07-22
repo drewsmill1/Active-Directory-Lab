@@ -287,8 +287,8 @@ Active-Directory-Lab
 │   ├── ticket-004-remove-test-group.md
 │   ├── ticket-005-password-reset.md
 │   ├── ticket-006-disable-user-account.md
-│   ├── ticket-007-join-workstation-domain.md
-│   └── ticket-008-create-group-policy.md
+│   ├── ticket-007-join-workstation-to-active-directory-domain.md
+│   └── ticket-008-create-and-apply-group-policy.md
 ```
 
 ---
